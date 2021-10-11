@@ -1,0 +1,143 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header header header header"
+    "nav main main aside3"
+    "nav aside1 aside2 aside3"
+    "footer footer footer footer";
+  height: auto;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to top, #ffecd2 0%, #fcb69f 100%);
+  width: auto;
+  gap: 0.5rem;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: nav;
+  display: flex;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  justify-content: center;
+  background: whitesmoke;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+nav li {
+  list-style-type: none;
+  padding: 20px;
+  font-size: 1.2rem;
+}
+
+main {
+  grid-area: main;
+}
+
+iframe {
+  width: 100%;
+  padding-top: 2%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+figcaption {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-decoration: underline;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+.aside1 {
+  grid-area: aside1;
+  background: rgb(110, 129, 110);
+}
+
+.aside2 {
+  grid-area: aside2;
+  background: rgb(172, 157, 157);
+}
+
+.aside3 {
+  grid-area: aside3;
+  background: whitesmoke;
+  padding-top: 20%;
+  padding-bottom: 20%;
+}
+
+table {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+footer {
+  grid-area: footer;
+  background: rgb(126, 156, 156);
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 640px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.2fr 0.1fr 0.1fr;
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "aside1"
+      "aside2"
+      "aside3"
+      "footer";
+  }
+}
+
+@media only screen and (max-width: 1045px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.2fr 0.1fr;
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "aside1"
+      "aside2"
+      "aside3"
+      "footer";
+  }
+}
